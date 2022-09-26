@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Folder>
+    <name>Ground Overlays</name>
+    <description>Laredo Lots</description>
+    <GroundOverlay>
+      <name>359 - 30 acres - Masterplan</name>
+      <description>359 - 30 acres - Masterplan</description>
+      <Icon>
+        <href>https://storage.googleapis.com/files.laredolots.com/359.png</href>
+      </Icon>
+	<LatLonBox>
+		<north>27.49098636637946</north>
+		<south>27.48433222413576</south>
+		<east>-99.41966334249365</east>
+		<west>-99.42141107031159</west>
+		<rotation>1.0238037109375</rotation>
+	</LatLonBox>
+    </GroundOverlay>
+  </Folder>
+</kml>

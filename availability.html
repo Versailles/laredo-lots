@@ -3,14 +3,31 @@
     <script>
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 11,
-            center: {lat: 27.531, lng: -99.503}
+                zoom: 13,
+                center: {lat: 27.490, lng: -99.419}	
+            });
+            
+            const imageUrl = 'https://storage.googleapis.com/files.laredolots.com/359.png';
+            const imageBounds = {
+                north: 27.49098636637946,
+                south: 27.48433222413576,
+                east: -99.41966334249365,
+                west: -99.42141107031159
+            };
+            
+            const logoUrl = 'https://storage.googleapis.com/files.laredolots.com/icon-border-city-development-75x75.png'
+            
+            const logoMarker = new google.maps.Marker({
+                position: { lat: 27.49098636637946, lng: -99.41966334249365 },
+                map,
+                icon: logoUrl
             });
 
-            var ctaLayer = new google.maps.KmlLayer({
-            url: 'https://storage.googleapis.com/files.laredolots.com/cta.kml',
-            map: map
-            });
+            var lotsOverlay = new google.maps.GroundOverlay(
+                imageUrl,
+                imageBounds
+            );
+            lotsOverlay.setMap(map);
         }
     </script>
     <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSlyomzRoOMZzdykbwBQ_7XRJzaiNxGWQ&libraries=places&callback=initMap"></script>
