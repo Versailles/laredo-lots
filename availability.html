@@ -1,8 +1,18 @@
 <body class="body">
     <div id="map" style="width:100%; height:100%;"></div>
-    <div>
-        <script src="./js/inventory.js"></script>
-        <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSlyomzRoOMZzdykbwBQ_7XRJzaiNxGWQ&libraries=places&callback=initMap"></script>
-    </div>
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 11,
+            center: {lat: 27.531, lng: -99.503}
+            });
+
+            var ctaLayer = new google.maps.KmlLayer({
+            url: 'https://storage.googleapis.com/files.laredolots.com/cta.kml',
+            map: map
+            });
+        }
+    </script>
+    <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSlyomzRoOMZzdykbwBQ_7XRJzaiNxGWQ&libraries=places&callback=initMap"></script>
     <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
